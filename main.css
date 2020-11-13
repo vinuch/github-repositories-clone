@@ -1,0 +1,52 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+}
+:root {
+  --darkBlue: #23292e;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+
+nav {
+  background-color: var(--darkBlue);
+  color: white;
+  padding: .6rem 2rem;
+  display: flex;
+  align-items: center;
+}
+
+nav > ul {
+  display: flex;
+}
+
+nav > input {
+  border: 1px solid #454d56;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: .5rem .4rem;
+  color: white;
+  margin: 0 1rem;
+  width: 15%;
+}
+
+nav > ul li {
+  margin: 0 .4rem;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+
+}
+
+nav > ul li:hover {
+  color: #a0aec0
+}
+
+.nav-logo {
+  width: 2rem;
+}
