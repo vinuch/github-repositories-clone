@@ -1,47 +1,5 @@
 
-  fetch('https://gh-repositoriesclone.netlify.app/.netlify/functions/github', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    'Authorization': `bearer ${process.env.AUTH_TOKEN ? rocess.env.AUTH_TOKEN  : config.AUTH_TOKEN}`,
-  },
-  body:  JSON.stringify({ query:  `{ viewer {     login
-      starredRepositories {
-        totalCount
-      }
-      following {
-        totalCount
-      }
-      followers {
-        totalCount
-      }
-      repositories(last: 20) {
-        nodes {
-          name
-          url
-          description
-          updatedAt
-          isFork
-          primaryLanguage {
-            name
-            color
-          }
-          isPrivate
-        }
-      }
-      avatarUrl
-      bio
-      email
-      name
-      location
-      twitterUsername
-      websiteUrl
-      organizations {
-        totalCount
-      } }}`
-    })
-  
-})
+  fetch('https://gh-repositoriesclone.netlify.app/.netlify/functions/github')
   .then(response => response.json())
   .then(data => {
     console.log(data)
