@@ -3,7 +3,7 @@
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': `bearer 4baeab66ed2234bd9d055d12a86b74130441cdeb`,
+    'Authorization': `bearer 04fe48648bd77d5d7df4ef4e640709061b20620b`,
   },
   body:  JSON.stringify({ query:  `{ viewer {     login
       starredRepositories {
