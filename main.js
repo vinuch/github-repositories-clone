@@ -1,4 +1,5 @@
-fetch('https://api.github.com/graphql', {
+
+  fetch('https://api.github.com/graphql', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
