@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/vinuch/github-repositories-clone#readme",
   "dependencies": {
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.1"
   }
 }
