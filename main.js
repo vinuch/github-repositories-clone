@@ -1,5 +1,5 @@
 
-  fetch('https://gh-repositoriesclone.netlify.app/.netlify/functions/hello', {
+  fetch('https://gh-repositoriesclone.netlify.app/.netlify/functions/github', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',

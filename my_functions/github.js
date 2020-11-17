@@ -6,7 +6,7 @@ exports.handler = function(event, context, callback) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `bearer ${process.env.AUTH_TOKEN ? rocess.env.AUTH_TOKEN  : config.AUTH_TOKEN}`,
+        'Authorization': `bearer ${process.env.AUTH_TOKEN}`,
       },
       body:  JSON.stringify({ query:  `{ viewer {     login
           starredRepositories {
