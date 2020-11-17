@@ -1,9 +1,10 @@
-
+console.log(process.env.NODE_ENV,process.env.AUTH_TOKEN)
+// 865d0726651b119225bc24cafb370abdab91461e
   fetch('https://api.github.com/graphql', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': `bearer 04fe48648bd77d5d7df4ef4e640709061b20620b`,
+    'Authorization': `bearer `,
   },
   body:  JSON.stringify({ query:  `{ viewer {     login
       starredRepositories {
