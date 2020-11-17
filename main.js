@@ -1,6 +1,5 @@
-require('dotenv').config()
-console.log(process.env)
-  fetch('https://api.github.com/graphql', {
+
+  fetch('https://gh-repositoriesclone.netlify.app/.netlify/functions/hello', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
@@ -45,6 +44,7 @@ console.log(process.env)
 })
   .then(response => response.json())
   .then(data => {
+    console.log(data)
     let resultObject = data.data.viewer
     document.querySelector('.avatar-big').src = resultObject.avatarUrl
     document.querySelector('.avatar-small').src = resultObject.avatarUrl
