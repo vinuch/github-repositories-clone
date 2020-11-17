@@ -1,10 +1,10 @@
-console.log(process.env.NODE_ENV,process.env.AUTH_TOKEN)
-// 865d0726651b119225bc24cafb370abdab91461e
+require('dotenv').config()
+console.log(process.env)
   fetch('https://api.github.com/graphql', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': `bearer `,
+    'Authorization': `bearer ${process.env.AUTH_TOKEN ? rocess.env.AUTH_TOKEN  : config.AUTH_TOKEN}`,
   },
   body:  JSON.stringify({ query:  `{ viewer {     login
       starredRepositories {
