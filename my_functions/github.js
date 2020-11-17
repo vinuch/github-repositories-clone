@@ -44,8 +44,7 @@ exports.handler = function(event, context, callback) {
             totalCount
           } }}`
         })
-      
-    })
+      })
       .then(response => response.json())
       .then(json => {
         data = json
