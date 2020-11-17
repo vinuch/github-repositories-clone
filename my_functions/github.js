@@ -5,6 +5,7 @@ exports.handler = function(event, context, callback) {
     fetch(baseUrl, {
       method: 'POST',
       headers: {
+        "Access-Control-Allow-Origin": "*",
         'Content-Type': 'application/json',
         'Authorization': `bearer ${process.env.AUTH_TOKEN}`,
       },

@@ -28,7 +28,6 @@ nav {
   background-color: var(--darkBlue);
   color: white;
   padding: .6rem 2rem;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -361,7 +360,7 @@ footer {
   margin: 6rem 7rem 0;
   padding: 2rem 0 ;
   border-top: 1px solid #c9c9c9;
-
+  padding-bottom: 2rem;
 }
 
 footer ul {
