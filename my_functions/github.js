@@ -50,7 +50,7 @@ exports.handler = function(event, context, callback) {
          }
  }
 }
-}}`
+}`
         })
       })
       .then(response => response.json())
