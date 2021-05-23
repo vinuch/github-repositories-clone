@@ -51,11 +51,17 @@
         <div class="img-container">
           <img class="logo" src="assets/github.png" alt="github logo">
         </div>
-        <div class="user-input">
-          <label for="username">Github Username</label><br>
-          <input type="text" name="username" id="username" placeholder="vincent">
-          <button class="">New</button>
-        </div>
+        <form class="user-input" action="/profile.html">
+          <!-- <div > -->
+            <label for="username">Github Username</label><br>
+            <input type="text" name="user" id="username" placeholder="vincent" required>
+            <!-- <a href="/profile.html?user=%22vinuch%22"> -->
+              <button type="submit" class="cta">Get Repositories</button>
+            <!-- </a> -->
+            
+          <!-- </div> -->
+        </form>
+        
 
       </div>
     </div>
@@ -83,8 +89,7 @@
   </footer>
 
   
-<script src="config.js"></script>
-<script src="main.js"></script>
+<!-- <script src="main.js"></script> -->
   <script>
     let atTopOfPage = true
           window.addEventListener('scroll', () => {

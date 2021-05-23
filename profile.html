@@ -43,7 +43,9 @@
     </div>
   </nav>
 
-  <main>
+  <p id="loading">Loading....</p>
+  <p id="not-found">user not found....</p>
+  <main class="main-profile">
     <div class="fixed-nav desktop flex">
       <ul class="flex">
         <li class="flex">
@@ -143,12 +145,13 @@
   </footer>
 
   
-<script src="config.js"></script>
 <script src="main.js"></script>
   <script>
+    console.log(screen.width)
+    let snapTriggerOffset = screen.width > 600 ? 100 : 500
     let atTopOfPage = true
           window.addEventListener('scroll', () => {
-            if(window.pageYOffset> 100){
+            if(window.pageYOffset > snapTriggerOffset){
               // user is scrolled
               if(atTopOfPage) {atTopOfPage = false; console.log('scroll')}
               document.querySelectorAll('.fixed-nav').forEach(e => e.classList.add('fixed'))
