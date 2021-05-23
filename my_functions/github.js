@@ -15,7 +15,7 @@ exports.handler = function(event, context, callback) {
         'Content-Type': 'application/json',
         'Authorization': `bearer ${process.env.AUTH_TOKEN}`,
       },
-      body:  JSON.stringify({ query:  `  user(login: ${user}) {
+      body:  JSON.stringify({ query:  `  {user(login: ${user}) {
         starredRepositories {
          totalCount
        }
@@ -50,7 +50,7 @@ exports.handler = function(event, context, callback) {
          }
  }
 }
-}`
+}}`
         })
       })
       .then(response => response.json())
