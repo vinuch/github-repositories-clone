@@ -17,6 +17,7 @@ exports.handler = function(event, context, callback) {
         'Authorization': `bearer ${process.env.AUTH_TOKEN}`,
       },
       body:  JSON.stringify({ query:  `  {user(login: ${user}) {
+        login
         starredRepositories {
          totalCount
        }

@@ -1,10 +1,11 @@
 
   const params = new URLSearchParams(window.location.search)
+  console.log(params)
   fetch(`https://gh-repositoriesclone.netlify.app/.netlify/functions/github/?user=${params.get('user')}`)
   .then(response => response.json())
   .then(data => {
     console.log(data)
-    let resultObject = data.data.viewer
+    let resultObject = data.data.user
     document.querySelector('.avatar-big').src = resultObject.avatarUrl
     document.querySelector('.avatar-small').src = resultObject.avatarUrl
     document.querySelector('.bio-text').innerText = resultObject.bio
