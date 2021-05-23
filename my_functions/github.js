@@ -8,6 +8,7 @@ const headers = {
 exports.handler = function(event, context, callback) {
   const baseUrl = 'https://api.github.com/graphql';
   const user = event.queryStringParameters.user
+  console.log(user)
     fetch(baseUrl, {
       method: 'POST',
       headers: {
