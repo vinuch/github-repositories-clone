@@ -509,6 +509,7 @@ footer ul li:hover {
 
 .user-input-content > .img-container > img {
   width: 6rem;
+  height: 6rem;
 }
  
 .user-input { 
