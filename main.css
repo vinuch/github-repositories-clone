@@ -465,3 +465,43 @@ footer ul li:hover {
     display: none;
   }
 }
+
+.user-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 68vh;
+}
+
+.user-input-content {
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.user-input-content > .img-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.user-input-content > .img-container > img {
+  width: 8rem;
+}
+ 
+.user-input { 
+  width: 50%;
+}
+.user-input > label { 
+  font-weight: 500;
+  font-size: 16px;
+}
+.user-input > input{
+  padding: .8rem;
+  border-radius: 6px;
+  border: solid #c9c9c9 1px;
+  width: 100%;
+  margin: 1rem 0;
+}

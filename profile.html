@@ -19,9 +19,7 @@
     <div id="nav_left">
       <a href="/">
         <img class="nav-logo" src="assets/github.svg" alt="github logo">
-      </a>
-      
-      <input type="text" placeholder="Search or jump to...">
+      </a><input type="text" placeholder="Search or jump to...">
       <ul>
         <li>Pull requests</li>
         <li>Issues</li>
@@ -29,7 +27,7 @@
         <li>Explore</li>
       </ul>
     </div>
-    <!-- <div id="nav_right" class="flex">
+    <div id="nav_right" class="flex">
       <svg id="notification-icon" fill="#fff" class="octicon octicon-bell" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path  d="M8 16a2 2 0 001.985-1.75c.017-.137-.097-.25-.235-.25h-3.5c-.138 0-.252.113-.235.25A2 2 0 008 16z"></path><path d="M8 1.5A3.5 3.5 0 004.5 5v2.947c0 .346-.102.683-.294.97l-1.703 2.556a.018.018 0 00-.003.01l.001.006c0 .002.002.004.004.006a.017.017 0 00.006.004l.007.001h10.964l.007-.001a.016.016 0 00.006-.004.016.016 0 00.004-.006l.001-.007a.017.017 0 00-.003-.01l-1.703-2.554a1.75 1.75 0 01-.294-.97V5A3.5 3.5 0 008 1.5zM3 5a5 5 0 0110 0v2.947c0 .05.015.098.042.139l1.703 2.555A1.518 1.518 0 0113.482 13H2.518a1.518 1.518 0 01-1.263-2.36l1.703-2.554A.25.25 0 003 7.947V5z"></path></svg>
       <div class="flex items-center">
         <img class="new-icon" src="assets/plus.svg" alt="github logo">
@@ -42,22 +40,84 @@
       </div>
       
 
-    </div> -->
+    </div>
   </nav>
 
   <main>
-    <div class="user-input-container">
-      <div class="user-input-content">
-        <div class="img-container">
-          <img class="logo" src="assets/github.png" alt="github logo">
+    <div class="fixed-nav desktop flex">
+      <ul class="flex">
+        <li class="flex">
+          <img src="assets/overview.svg" alt="overview">
+          <span>Overview</span>
+        </li>
+        <li class="active flex">
+          <img src="assets/repositories.svg" alt="overview">
+          <span>Repositories</span>
+        </li>
+        <li class="flex">
+          <img src="assets/bar-chart.svg" alt="overview">
+          <span>Projects</span>
+        </li>
+        <li class="flex">
+          <img src="assets/cube.svg" alt="overview">
+          <span>Packages</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content-container flex">
+      <div class="bio">
+        <img class="avatar-big" src="" alt="github logo">
+        <div class="names">
+          <h3 class="name"></h3>
+          <span id="username"></span>
         </div>
-        <div class="user-input">
-          <label for="username">Github Username</label><br>
-          <input type="text" name="username" id="username" placeholder="vincent">
-          <button class="">New</button>
-        </div>
+        <p class="bio-text"></p>
+        <button>Edit profile</button>
+        <ul class="flex interaction-metrics">
+          <li class="flex interaction-metric" id="followers"></li>
+          <li class="flex interaction-metric" id="following"></li>
+          <li class="flex interaction-metric"> <img width="15px" height="15px" src="assets/star.svg" alt=""> <span id="stared"></span></li>
+        </ul>
+        <ul class="contact">
+          <li><img width="15px" src="assets/pin.svg" alt=""> <span id="location"></span></li>
+          <li><img width="15px" src="assets/mail.svg" alt=""> <span><a href="#" id="email"></a></span></li>
+          <li><img width="15px" src="assets/link.svg" alt=""> <span><a href="#" id="website"></a> </span></li>
+          <li><img width="15px" src="assets/twitter.svg" alt=""> <span id="twitter"></span> </li>
+        </ul>
+
 
       </div>
+      <div class="repos">
+        <div class="flex filter-bar ">
+          <div class="fixed-nav flex mobile">
+            <ul class="flex">
+              <li class="flex">
+                <img src="assets/overview.svg" alt="overview">
+                <span>Overview</span>
+              </li>
+              <li class="active flex">
+                <img src="assets/repositories.svg" alt="overview">
+                <span>Repositories</span>
+              </li>
+              <li class="flex">
+                <img src="assets/bar-chart.svg" alt="overview">
+                <span>Projects</span>
+              </li>
+              <li class="flex">
+                <img src="assets/cube.svg" alt="overview">
+                <span>Packages</span>
+              </li>
+            </ul>
+          </div>
+          <input type="text" placeholder="Find a repository...">
+        <button>Type: All</button>
+        <button>Language: All</button>
+        <button class="new-btn">New</button>
+
+        </div>
+
+
     </div>
   </main>
 

@@ -7,6 +7,7 @@ const headers = {
 };
 exports.handler = function(event, context, callback) {
   const baseUrl = 'https://api.github.com/graphql';
+  const user = event.queryStringParameters.user
     fetch(baseUrl, {
       method: 'POST',
       headers: {
@@ -14,40 +15,42 @@ exports.handler = function(event, context, callback) {
         'Content-Type': 'application/json',
         'Authorization': `bearer ${process.env.AUTH_TOKEN}`,
       },
-      body:  JSON.stringify({ query:  `{ viewer {     login
-          starredRepositories {
-            totalCount
-          }
-          following {
-            totalCount
-          }
-          followers {
-            totalCount
-          }
-          repositories(last: 20) {
-            nodes {
-              name
-              url
-              description
-              updatedAt
-              isFork
-              primaryLanguage {
-                name
-                color
-              }
-              isPrivate
-            }
-          }
-          avatarUrl
-          bio
-          email
-          name
-          location
-          twitterUsername
-          websiteUrl
-          organizations {
-            totalCount
-          } }}`
+      body:  JSON.stringify({ query:  `  user(login: ${user}) {
+        starredRepositories {
+         totalCount
+       }
+       following {
+         totalCount
+       }
+       followers {
+         totalCount
+       }
+       avatarUrl
+       bio
+       email
+       name
+       location
+       twitterUsername
+       websiteUrl
+       organizations {
+         totalCount
+       }
+       repositories(last: 20) {
+               nodes {
+           name
+           url
+           description
+           updatedAt
+           isFork
+           primaryLanguage {
+             name
+             color
+           }
+           isPrivate
+         }
+ }
+}
+}`
         })
       })
       .then(response => response.json())
