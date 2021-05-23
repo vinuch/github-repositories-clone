@@ -1,5 +1,6 @@
 
-  fetch('https://gh-repositoriesclone.netlify.app/.netlify/functions/github')
+  const params = new URLSearchParams(window.location.search)
+  fetch(`https://gh-repositoriesclone.netlify.app/.netlify/functions/github/?user=${params.get('user')}`)
   .then(response => response.json())
   .then(data => {
     console.log(data)
